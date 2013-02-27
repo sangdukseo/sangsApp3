@@ -13,3 +13,9 @@ require 'spec_helper'
 describe StaticPagesHelper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
+
+module ApplicationHelper
+  def title(page_title = '')
+    content_for(:title) { page_title }
+  end
+end
