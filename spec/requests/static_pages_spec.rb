@@ -1,13 +1,14 @@
 require 'spec_helper'
 
 describe "Static pages" do
-	
+	render_views
+
   subject { page }
 
   describe "Home page" do
     before { visit root_path}
 
-    it { should have_selector('h1', text: 'My Home') }
+    it { should have_selector('h1', text: 'Home') }
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector('title', text: '| Home') }
   end
